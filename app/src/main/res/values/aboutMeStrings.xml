@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="first_fact">I am a third-year student of BSUIR</string>
+    <string name="second_fact">This is my first app</string>
+    <string name="third_fact">This application is currently at an early stage of development</string>
+</resources>
