@@ -1,9 +1,11 @@
 [versions]
-agp = "8.1.1"
+accompanist-navigation-material = "0.33.2-alpha"
+agp = "8.1.2"
 androidx-room-compiler = "2.5.2"
 androidx-room-room-compiler = "2.5.2"
 coil = "2.4.0"
 datastore-preferences-core = "1.0.0"
+google-accompanist-navigation-material = "<version>"
 insert-koin-koin-android = "v1.0.4"
 insert-koin-koin-core = "3.4.3"
 io-insert-koin-koin-android = "3.4.3"
@@ -12,6 +14,7 @@ koin-compose = "1.0.4"
 koin-core = "3.4.3"
 kotlinx-coroutines-core = "1.7.3"
 kotlinx-serialization-json = "1.6.0"
+ksp = "1.9.54"
 ktor-server-content-negotiation = "2.3.4"
 logback-classic = "1.4.11"
 material = "1.9.0"
@@ -30,8 +33,19 @@ room-runtime = "v2.5.2"
 symbol-processing-api = "1.9.0-1.0.11"
 work-runtime-ktx = "v2.8.1"
 databinding-compiler = "8.1.1"
+appcompat = "1.6.1"
+constraintlayout = "2.1.4"
+lifecycle-livedata-ktx = "2.6.2"
+lifecycle-viewmodel-ktx = "2.6.2"
+navigation-fragment-ktx = "2.6.0"
+navigation-ui-ktx = "2.6.0"
+transport-runtime = "3.1.9"
+nav-version = "2.7.4"
 
 [libraries]
+accompanist-navigation-animation = { module = "com.google.accompanist:accompanist-navigation-animation", version.ref = "accompanist-navigation-material" }
+accompanist-navigation-material = { module = "com.google.accompanist:accompanist-navigation-material", version.ref = "accompanist-navigation-material" }
+accompanist-permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanist-navigation-material" }
 androidx-datastore-preferences-core = { module = "androidx.datastore:datastore-preferences-core", version.ref = "datastore-preferences-core" }
 androidx-lifecycle-process = { module = "androidx.lifecycle:lifecycle-process", version.ref = "lifecycle-runtime-ktx" }
 androidx-lifecycle-service = { module = "androidx.lifecycle:lifecycle-service", version.ref = "lifecycle-runtime-ktx" }
@@ -56,6 +70,7 @@ androidx-room-testing = { module = "androidx.room:room-testing", version = "2.5.
 androidx-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version = "2.8.1" }
 coil = { module = "io.coil-kt:coil", version.ref = "coil" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+core = { module = "io.github.raamcosta.compose-destinations:core", version.ref = "ksp" }
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
@@ -68,6 +83,7 @@ koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin-core" }
 koin-core-3_4_0 = { module = "io.insert-koin:koin-core", version.ref = "insert-koin-koin-core" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines-core" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization-json" }
+ksp = { module = "io.github.raamcosta.compose-destinations:ksp", version.ref = "ksp" }
 ktor-client-apache5 = { module = "io.ktor:ktor-client-apache5", version = "2.3.4" }
 ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor-server-content-negotiation" }
 ktor-server-auth = { module = "io.ktor:ktor-server-auth", version.ref = "ktor-server-content-negotiation" }
@@ -86,7 +102,15 @@ ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-databinding-compiler = { group = "androidx.databinding", name = "databinding-compiler", version.ref = "databinding-compiler" }
-
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle-livedata-ktx" }
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle-viewmodel-ktx" }
+navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation-fragment-ktx" }
+navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation-ui-ktx" }
+transport-runtime = { group = "com.google.android.datatransport", name = "transport-runtime", version.ref = "transport-runtime" }
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version = "2.7.2" }
+androidx-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "nav-version" }
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }

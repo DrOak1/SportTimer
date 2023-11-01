@@ -1,14 +1,15 @@
+
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
-    id("com.google.devtools.ksp")
+    id("com.google.devtools.ksp") version "1.9.10-1.0.13"
 }
 
 android {
     namespace = "com.nikitamedvedev.cybertimer"
     compileSdk = 34
-    packagingOptions{
+    packagingOptions {
         resources.excludes.add("META-INF/*")
     }
     defaultConfig {
@@ -42,6 +43,7 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.3"
@@ -56,6 +58,14 @@ android {
 dependencies {
 
 
+    implementation(libs.core)
+    ksp(libs.ksp)
+
+    implementation(libs.accompanist.permissions)
+    implementation(libs.accompanist.navigation.material)
+    implementation(libs.accompanist.navigation.animation)
+    implementation(libs.navigation.compose)
+
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.activity.compose)
@@ -65,11 +75,20 @@ dependencies {
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
     implementation(libs.androidx.databinding.compiler)
+    implementation(libs.appcompat)
+    implementation(libs.material)
+    implementation(libs.constraintlayout)
+    implementation(libs.lifecycle.livedata.ktx)
+    implementation(libs.lifecycle.viewmodel.ktx)
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
+    implementation(libs.transport.runtime)
 
     val composeBom = platform("androidx.compose:compose-bom:2023.08.00")
     implementation(composeBom)
     androidTestImplementation(composeBom)
 
+    runtimeOnly("androidx.compose.ui:ui:1.6.0-alpha06")
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.foundation:foundation")
     implementation("androidx.compose.ui:ui")
@@ -88,7 +107,6 @@ dependencies {
     implementation(libs.koin.core)
     implementation(libs.koin.android)
     implementation(libs.koin.compose)
-
 
     implementation(libs.androidx.work.runtime.ktx)
 
@@ -133,4 +151,5 @@ dependencies {
     androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
+
 }

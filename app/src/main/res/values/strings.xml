@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">CyberTimer</string>
+    <string name="app_name">SportTimer</string>
+    <string name="first_fact" translatable="false">I am a third-year student of BSUIR</string>
+    <string name="second_fact" translatable="false">This is my first app</string>
+    <string name="third_fact" translatable="false">This application is currently at an early stage of development</string>
+    <string name="navigation_icon_about">About</string>
+    <string name="app_version">App Version 0.1.1</string>
+    <string name="textbutton_privacy_policy">Privacy Policy</string>
+    <string name="textbutton_github">GitHub</string>
+    <string name="textbutton_bug_report">Bug Report</string>
+    <string name="textbutton_faq">FAQ</string>
+    <string name="author">Author: Nikita Medvedev</string>
+    <string name="title_activity_about_author">About_Author</string>
+    <string name="home">Home</string>
+    <string name="about_author">About Author</string>
+
 </resources>

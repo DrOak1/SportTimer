@@ -2,4 +2,5 @@
 <resources>
 
     <style name="Theme.CyberTimer" parent="Theme.AppCompat.DayNight" />
+
 </resources>
